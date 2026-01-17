@@ -17,4 +17,55 @@ This project explores:
 - and modular integration of local language models for grounded generation.
 
 ---
+Planned Architecture 
 
+The system is built around **LangChain** for orchestration and **local models via Ollama**, enabling full local execution without dependence on external APIs.
+
+---
+
+## Key Features (in progress)
+
+- Scientific PDF ingestion (digital and scanned)
+- OCR pipelines for scanned sources
+- Document cleaning and metadata extraction
+- Chunking and embedding workflows
+- Vector-based retrieval
+- LangChain-based RAG orchestration
+- Local LLM inference using Ollama
+- Grounded answering with source attribution
+
+---
+
+## Tech Stack
+
+- Python  
+- LangChain  
+- Ollama (local LLM inference)  
+- FAISS / Chroma (vector storage, planned)  
+- OCR (e.g. Tesseract, planned)  
+
+---
+
+## Current Status
+
+This project is under active development.  
+Initial focus is on building robust ingestion and preprocessing pipelines, followed by retrieval workflows and evaluation of answer grounding and accuracy.
+
+---
+
+## Roadmap
+
+- [ ] PDF loaders and OCR preprocessing
+- [ ] Text cleaning and chunking strategies
+- [ ] Embedding and vector store integration
+- [ ] LangChain RAG pipeline
+- [ ] Local model benchmarking
+- [ ] Simple evaluation suite for answer grounding
+- [ ] Documentation and example notebooks
+
+---
+
+## Disclaimer
+
+This system is intended for research and experimentation.  
+It is not a production system and is continuously evolving.
