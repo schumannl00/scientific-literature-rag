@@ -42,7 +42,8 @@ The system is built around **LangChain** for orchestration and **local models vi
 - LangChain  
 - Ollama (local LLM inference)  
 - Chroma (vector storage)  
-- OCR (Tesseract)  
+- OCR (Tesseract)
+- Streamlit (UI) 
 
 ---
 
