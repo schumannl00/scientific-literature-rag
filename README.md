@@ -55,10 +55,10 @@ Initial focus is on building robust ingestion and preprocessing pipelines, follo
 
 ## Roadmap
 
-- [ ] PDF loaders and OCR preprocessing
-- [ ] Text cleaning and chunking strategies
-- [ ] Embedding and vector store integration
-- [ ] LangChain RAG pipeline
+- [x] PDF loaders and OCR preprocessing
+- [x] Text cleaning and chunking strategies
+- [x] Embedding and vector store integration
+- [x] LangChain RAG pipeline
 - [ ] Local model benchmarking
 - [ ] Simple evaluation suite for answer grounding
 - [ ] Documentation and example notebooks
