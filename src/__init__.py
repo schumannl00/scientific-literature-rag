@@ -1,0 +1,1 @@
+from .query import load_rag_chain

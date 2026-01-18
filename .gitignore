@@ -1,0 +1,14 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+# RAG Data
+data/chroma_db/
+data/pdfs/
+data/new_pdfs/
+.env
+
+# Streamlit
+.streamlit/config.toml

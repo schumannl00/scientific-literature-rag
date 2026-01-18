@@ -1,0 +1,187 @@
+{
+  "total_questions": 9,
+  "avg_topic_coverage": 0.7914021164021164,
+  "avg_latency_seconds": 58.48600172996521,
+  "avg_answer_length_words": 331.8888888888889,
+  "avg_sources_retrieved": 2.0,
+  "detailed_results": [
+    {
+      "question": "What are von Neumann algebras?",
+      "category": "definition",
+      "answer_length_words": 201,
+      "topic_coverage": 0.6666666666666666,
+      "topics_found": [
+        "algebra",
+        "closed",
+        "operator",
+        "hilbert space"
+      ],
+      "topics_missing": [
+        "weak topology",
+        "strong topology"
+      ],
+      "num_sources": 2,
+      "unique_sources": 2,
+      "latency_seconds": 26.762852430343628,
+      "answer_preview": "Von Neumann algebras are self-adjoint unital subalgebras \\( M \\) of the algebra of bounded operators on a Hilbert space \\( \\mathcal{H} \\), denoted by \\( B(\\mathcal{H}) \\). Specifically, these algebras..."
+    },
+    {
+      "question": "What is the modular operator",
+      "category": "definition",
+      "answer_length_words": 255,
+      "topic_coverage": 0.875,
+      "topics_found": [
+        "modular",
+        "operator",
+        "tomita",
+        "theory",
+        "state",
+        "adjoint",
+        "von Neumann"
+      ],
+      "topics_missing": [
+        "hilbert space"
+      ],
+      "num_sources": 2,
+      "unique_sources": 2,
+      "latency_seconds": 52.35455274581909,
+      "answer_preview": "The modular operator \\(\\Delta\\) associated with a state \\(\\varphi\\) on a von Neumann algebra \\(M\\) and its standard representation \\((\\mathcal{H}, \\pi, \\xi_\\varphi)\\) can be defined as follows:\n\nGiven..."
+    },
+    {
+      "question": "Describe the process of quantization in physics",
+      "category": "explanation",
+      "answer_length_words": 536,
+      "topic_coverage": 1.0,
+      "topics_found": [
+        "classical",
+        "quantum",
+        "observables",
+        "commutation",
+        "operators",
+        "phase space"
+      ],
+      "topics_missing": [],
+      "num_sources": 2,
+      "unique_sources": 1,
+      "latency_seconds": 81.11600232124329,
+      "answer_preview": "The process of quantization in physics involves transforming classical field theories into quantum field theories. This transformation is crucial for understanding and predicting phenomena at microsco..."
+    },
+    {
+      "question": "Waht ared Dirac fields?",
+      "category": "definition",
+      "answer_length_words": 239,
+      "topic_coverage": 0.8,
+      "topics_found": [
+        "fermion",
+        "relativistic",
+        "equation",
+        "quantum field theory"
+      ],
+      "topics_missing": [
+        "spinor"
+      ],
+      "num_sources": 2,
+      "unique_sources": 2,
+      "latency_seconds": 49.377119302749634,
+      "answer_preview": "Dirac fields are mathematical constructs used in quantum field theory to describe spin-1/2 particles, such as electrons or quarks, which obey the Dirac equation. The Dirac equation is a relativistic w..."
+    },
+    {
+      "question": "Explain the condition needed for a manifold to be spin.",
+      "category": "explanation",
+      "answer_length_words": 263,
+      "topic_coverage": 0.4,
+      "topics_found": [
+        "spin structure",
+        "manifold"
+      ],
+      "topics_missing": [
+        "tangent bundle",
+        "clifford algebra",
+        "second stiefel-whitney class"
+      ],
+      "num_sources": 2,
+      "unique_sources": 2,
+      "latency_seconds": 51.274493932724,
+      "answer_preview": "For a manifold \\(M\\) to admit a spin structure, it must satisfy certain topological conditions. Specifically, in the context provided, we consider globally hyperbolic manifolds in 4 spacetime dimensio..."
+    },
+    {
+      "question": "What is a smooth manifold?",
+      "category": "definition",
+      "answer_length_words": 179,
+      "topic_coverage": 1.0,
+      "topics_found": [
+        "topological manifold",
+        "atlas",
+        "charts",
+        "differentiable",
+        "smooth structure"
+      ],
+      "topics_missing": [],
+      "num_sources": 2,
+      "unique_sources": 2,
+      "latency_seconds": 33.33683133125305,
+      "answer_preview": "A smooth manifold \\( M \\) is a topological manifold equipped with a smooth structure. Formally, the smooth structure on \\( M \\) is an equivalence class of smooth atlases, denoted as \\( S(M) = [A(M)] \\..."
+    },
+    {
+      "question": "Describe the modular automorphism group in von Neumann algebras.",
+      "category": "explanation",
+      "answer_length_words": 330,
+      "topic_coverage": 1.0,
+      "topics_found": [
+        "modular",
+        "automorphism",
+        "group",
+        "von Neumann",
+        "algebra",
+        "state",
+        "tomita-takesaki"
+      ],
+      "topics_missing": [],
+      "num_sources": 2,
+      "unique_sources": 1,
+      "latency_seconds": 57.02192664146423,
+      "answer_preview": "The modular automorphism group associated with a state on a von Neumann algebra is a fundamental concept in the theory of operator algebras, particularly within the framework of Tomita-Takesaki theory..."
+    },
+    {
+      "question": "Explain cohomology in algebraic topology.",
+      "category": "explanation",
+      "answer_length_words": 447,
+      "topic_coverage": 0.6666666666666666,
+      "topics_found": [
+        "cohomology",
+        "algebraic topology",
+        "chain complex",
+        "homology"
+      ],
+      "topics_missing": [
+        "cocycles",
+        "coboundaries"
+      ],
+      "num_sources": 2,
+      "unique_sources": 2,
+      "latency_seconds": 84.3726544380188,
+      "answer_preview": "Cohomology in algebraic topology is a fundamental concept that provides a way to study topological spaces through algebraic structures, specifically abelian groups. It complements homology theory and ..."
+    },
+    {
+      "question": "Motivate and explain the quantization of a the scalar field.",
+      "category": "explanation",
+      "answer_length_words": 537,
+      "topic_coverage": 0.7142857142857143,
+      "topics_found": [
+        "quantization",
+        "scalar field",
+        "classical",
+        "quantum",
+        "CCR"
+      ],
+      "topics_missing": [
+        "hamiltonian",
+        "Fock space"
+      ],
+      "num_sources": 2,
+      "unique_sources": 2,
+      "latency_seconds": 90.75758242607117,
+      "answer_preview": "The quantization of a scalar field, as part of deformation quantization, involves transforming the classical algebra of observables into a non-commutative algebra that reflects quantum mechanical effe..."
+    }
+  ]
+}
