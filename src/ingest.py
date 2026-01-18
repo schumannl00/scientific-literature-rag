@@ -15,21 +15,27 @@ import os
 import json
 from concurrent.futures import ProcessPoolExecutor
 import multiprocessing
-
+import warnings
+from cryptography.utils import CryptographyDeprecationWarning
 os.environ["ANONYMIZED_TELEMETRY"] = "False"
+
+# tesseract already uses all available cores, limit to 2 to avoid oversubscription. This is for a 8 core cpu setup, worked with 25gb ram allocated to wls2.
+os.environ["OMP_NUM_THREADS"] = "2"
+warnings.filterwarnings("ignore", category=CryptographyDeprecationWarning)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
 def extract_text_with_ocr(pdf_path: str | Path) -> List[Document]:
-    
+    """" Extract text from scanned PDF using OCR (Tesseract) 
+     Returns a list of Documents, one per page."""
     try:
         start_time = time.time()
         pdf_name = Path(pdf_path).name
         logger.info(f"🔍 Starting OCR for: {pdf_name}")
         
-        # Convert PDF to images
+        
         images = convert_from_path(str(pdf_path), dpi=200)
         total_pages = len(images)
         logger.info(f"   Converted to {total_pages} images")
@@ -73,7 +79,7 @@ def extract_text_with_ocr(pdf_path: str | Path) -> List[Document]:
 
 
 def process_single_pdf(pdf_path: str | Path) -> List[Document]:
-    
+    """ Process a single PDF: try fast extraction first, then OCR if needed. """
     try:
         start_time = time.time()
         pdf_name = Path(pdf_path).name
@@ -108,7 +114,7 @@ def process_single_pdf(pdf_path: str | Path) -> List[Document]:
 
 
 def process_pdf_batch_parallel(pdf_paths: List[Path], num_workers: int) -> List[Document]:
-   
+    """ Process a batch of PDFs in parallel using multiple processes. Good for large PDFs/ OCR. Be careful with RAM usage. """
     logger.info(f"Processing {len(pdf_paths)} PDFs in parallel with {num_workers} workers...")
     
     all_documents: List[Document] = []
@@ -143,9 +149,11 @@ def build_vectorstore(
     size_threshold_mb: float = 10.0,  # PDFs larger than this go to parallel processing
     max_workers: int | None = None
 ) -> Chroma:
-
+    """ Build a Chroma vector store from PDFs in the specified directory. 
+    Uses parallel processing for large PDFs to speed up OCR extraction.
+    Returns the built Chroma vector store.
+    """
     start_time = time.time()
-    
     # Determine number of workers
     if max_workers is None:
         max_workers = max(1, multiprocessing.cpu_count() - 2)
