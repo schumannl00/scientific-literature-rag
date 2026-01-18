@@ -17,11 +17,11 @@ This directory tracks the evolution of the Physics-RAG system. Below are the key
 * **Result:** Higher precision in answers. The LLM receives the most "logically" relevant context, reducing hallucinations in formulas.
 
 ### 3. Ephemeral In-Memory Scaling (Split DB)
-* **Problem:** Uploading a new PDF was triggering a full re-index of the 180+ base papers, causing 2-5 minute hangs on CPU.
+* **Problem:** Uploading a new PDF was triggering a full re-index of the 180+ base papers, causing near 1h hangs on CPU.
 * **Solution:** * **Base Store:** Persistent ChromaDB on disk.
     * **Temp Store:** `chromadb.EphemeralClient()` for user uploads (RAM-only).
     * **Logic:** Used `MergerRetriever` to query both simultaneously without re-embedding the base library.
-* **Result:** Document processing time dropped from minutes to ~10-15 seconds.
+* **Result:** Document processing time dropped from one hour to a few seconds for papers and 1-2 minutes for 400+ page books.
 
 ### 4. Dynamic LaTeX Rendering
 * **Problem:** Qwen 2.5 often outputted `\[ ... \]` or `\( ... \)` which broke the Streamlit KaTeX renderer.
