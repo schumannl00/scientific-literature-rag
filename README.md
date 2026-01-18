@@ -41,8 +41,8 @@ The system is built around **LangChain** for orchestration and **local models vi
 - Python  
 - LangChain  
 - Ollama (local LLM inference)  
-- FAISS / Chroma (vector storage, planned)  
-- OCR (e.g. Tesseract, planned)  
+- Chroma (vector storage)  
+- OCR (Tesseract)  
 
 ---
 
@@ -50,6 +50,7 @@ The system is built around **LangChain** for orchestration and **local models vi
 
 This project is under active development.  
 Initial focus is on building robust ingestion and preprocessing pipelines, followed by retrieval workflows and evaluation of answer grounding and accuracy.
+Check the experiments folder for updates and explanations of choices.
 
 ---
 
